@@ -11,7 +11,7 @@ See below (“Things that work”) for the current status.
 Some knowledge of Git is required to use this tool. And you will probably
 need to edit some variables in the source code.
 
-You need at least a 2.5 Python, my tests run with 2.6.
+You need at least Python 2.5, my tests run with 2.6.
 
 
 How it should be done:
@@ -20,8 +20,8 @@ You can get recent dumps of all Wikimedia wikis at:
 http://download.wikimedia.org/backup-index.html
 
 The pages-meta-history.xml file is what we want. (In case you’re wondering:
-Wikimedia does not offer content SQL dumps anymore, and there are now full-
-history dump for en.wikipedia.org because of its size.) It includes all pages
+Wikimedia does not offer content SQL dumps anymore, and there are no full-
+history dumps for en.wikipedia.org because of its size.) It includes all pages
 in all namespaces and all of their revisions.
 
 Alternatively, you may use a MediaWiki’s “Special:Export” page to create an XML
@@ -44,7 +44,7 @@ Things that work:
  - Store additional information in the commit message that specifies page and
    revision ID as well as whether the edit was marked as “minor”.
 
- - Use the page’s name as file name instead of the page ID. Non-ASCII
+ - Use the page name as file name (instead of the page ID). Non-ASCII
    characters and some ASCII ones will be replaced by “.XX”, where .XX is their
    hex value.
 
